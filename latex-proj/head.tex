@@ -1,0 +1,115 @@
+%the font size, paper size and document class
+\documentclass[12pt,a4paper,british]{article}
+%set the paper dimensions
+%\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{titlesec}
+%include graphics into the document
+\usepackage{graphicx}
+%enable the document to begin with
+\usepackage[document]{}
+\usepackage{lipsum}
+%enable the commands for fancy pages or clean pages without numbers etc..
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+%enable headers and footers on the document
+\usepackage{titletoc}
+%enable the use of hyperlinks and for hyperlinked contents page
+\usepackage[hidelinks,urlcolor=red]{hyperref}
+%enable the editing of titles and their format
+\usepackage{titling}
+%enable the configuration of spaces between titles and paragraphs
+\usepackage{setspace}
+%enable custom image locations in figures e.g. absolute positions etc..
+\usepackage{float}
+%enabling bibliography usage invoked with \cite{tag}
+\usepackage[square,sort,comma,authoryear]{natbib}
+%used to include separate files invoked with \subfile{file}
+\usepackage{subfiles}
+%font encoding library using method T1
+\usepackage[T1]{fontenc}
+% using Latin Modern Font?
+\usepackage{lmodern}
+%UK date format!
+\usepackage[nodayofweek]{datetime}
+%displaying code
+\usepackage{listings}
+%colour output in code
+\usepackage{color}
+%th, st, superscripts
+\usepackage[super]{nth}
+%bibliography in toc
+\usepackage[nottoc]{tocbibind}
+%wrapping figure in texts
+\usepackage{wrapfig}
+%multiple bibliographies
+\usepackage{multibib}
+% tables are page wrapped
+\usepackage{longtable}
+%reference new cites with \citeref
+\newcites{ref}{References}
+\newcites{bib}{Bibliography}
+
+%ragged2de for alignments
+
+\titleformat{\section}
+{\large\bfseries}
+{\thesection.}
+{0.5em}
+{}
+
+\titleformat{\subsection}
+{\large\bfseries}
+{\thesubsection}
+{0.5em}
+{}
+
+\titleformat{\subsubsection}
+{\large\bfseries}
+{\thesubsubsection}
+{0.5em}
+{}
+
+\newcommand{\code}{\fontfamily{pcr}\selectfont}
+%changing how sections are numbered, default = Arabic
+%\renewcommand{\thesection}{\Roman{section}}
+
+\lstset{basicstyle=\normalsize\rmfamily}
+\lstdefinestyle{basic}{language=C,basicstyle=\normalsize\rmfamily}
+\lstdefinestyle{code}{language=C,basicstyle=\normalsize\sffamily}
+%example file output
+%\lstinputlisting[language=C]{filename}
+
+% For black line around figures
+%\floatstyle{boxed} 
+%\restylefloat{figure}
+
+\titlespacing{\section}
+{0em}
+{0em}
+{0em}
+
+\titlespacing{\subsection}
+{0em}
+{0em}
+{0em}
+
+\titlespacing{\subsubsection}
+{0em}
+{0em}
+{0em}
+
+\author{authorname}
+\title{<++>}
+
+\fancyhead{}
+\fancyhead[L]{Author Name}
+\fancyhead[R]{<++>}
+\fancyfoot{}
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{<++>}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% making paragraphs 1 line separated with no indent
+\setlength\parindent{0pt}
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
